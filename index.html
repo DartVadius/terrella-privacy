@@ -124,11 +124,12 @@
 <!-- ==================== ENGLISH ==================== -->
 <section id="en" lang="en">
   <h1>Privacy Policy — Terrella</h1>
-  <p class="updated"><strong>Last updated:</strong> October 21, 2026</p>
+  <p class="updated"><strong>Last updated:</strong> October 28, 2026</p>
   <h2>Who we are</h2>
-  <p>Terrella is a mobile app: an interactive globe and solar system that works offline. This document describes what the app does with data and how we treat your privacy.</p>
+  <p>Terrella is a mobile app: an interactive globe and solar system. The map itself works offline; a few features use the network, and each one is described below. This document describes what the app does with data and how we treat your privacy.</p>
   <h2>What we collect</h2>
-  <p><strong>Nothing.</strong> Terrella has no servers, no user accounts and no sign-in. We do not collect, store or share any information about you, and we have no way to identify you.</p>
+  <p><strong>Nothing about you.</strong> Terrella has no user accounts and no sign-in. We do not collect, store or share any information about you, and we have no way to identify you.</p>
+  <p>Terrella does have one server of its own. It serves public data — the Live Earth view, the home-screen widget and article translations — and keeps nothing that identifies a reader. What it sees and what it keeps is described under &quot;Our server&quot; below.</p>
   <p>The app does not use:</p>
   <ul>
     <li>analytics or tracking (Google Analytics, Firebase, and similar)</li>
@@ -145,32 +146,47 @@
       <tr><td>Label filter settings</td><td>So your choice of which map labels to show survives a restart</td></tr>
       <tr><td>Purchase status (whether Pro is active and which product unlocked it)</td><td>So paid features work offline, without asking the store every time</td></tr>
       <tr><td>A cache of Wikipedia descriptions you have opened (up to 400 entries, kept 90 days)</td><td>So a place you looked at once still opens without a network</td></tr>
+      <tr><td>Live Earth settings: which layers are shown and whether temperatures are in °C or °F</td><td>So the view opens the way you left it</td></tr>
+      <tr><td>Whether articles are translated (&quot;Translate articles&quot; in the menu)</td><td>So your choice survives a restart</td></tr>
+      <tr><td>If you placed the home-screen widget: the last summary it downloaded and the language to show it in</td><td>So the widget has something to show between refreshes</td></tr>
       <tr><td>Your travel journal: the places you add to it, their dates and your notes, and whether it is shown on the globe</td><td>It is your diary. It leaves the device only if you export it to a file yourself, to a place you choose</td></tr>
     </tbody>
   </table>
-  <p>The whole map — every mode, all labels, all place names and facts — is bundled inside the app. Nothing about where you look on the globe is sent anywhere, and the app works fully with the network switched off.</p>
+  <p>The whole map — every view except Live Earth, all labels, all place names and facts — is bundled inside the app. Nothing about where you look on the globe is sent anywhere, and the map works fully with the network switched off.</p>
   <h2>When the app uses the internet</h2>
-  <p>The app connects to the internet in exactly two situations.</p>
-  <p><strong>1. When you tap a place and open its description.</strong> Terrella then requests the matching article from Wikipedia and Wikidata, both operated by the Wikimedia Foundation:</p>
+  <p>The app connects to the internet in the four situations below, and in no other.</p>
+  <p><strong>1. When you tap a place and open its description.</strong> Terrella then requests the matching article and its photos from Wikipedia, Wikidata and Wikimedia Commons, all operated by the Wikimedia Foundation:</p>
   <ul>
     <li><code>www.wikidata.org</code> — to find which article corresponds to the place you tapped, in your language</li>
-    <li><code>&lt;language&gt;.wikipedia.org</code> — to fetch the short summary that is displayed.</li>
+    <li><code>&lt;language&gt;.wikipedia.org</code> — to fetch the short summary that is displayed and the list of its photos</li>
+    <li><code>commons.wikimedia.org</code> and <code>upload.wikimedia.org</code> — for the photos and their captions.</li>
   </ul>
-  <p>What leaves your device is the identifier of the place you opened and your selected language. As with visiting any website, Wikimedia&#x27;s servers also see technical request data such as your IP address. Their handling of it is described in the <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Foundation Privacy Policy</a>. The result is cached on your device, so opening the same place again usually needs no request at all.</p>
-  <p><strong>2. When you make a purchase.</strong> Purchases and subscriptions are processed entirely by <strong>Google Play Billing</strong>. We never see or receive your name, payment card or billing address — the app only learns from Google whether an active purchase exists. Google&#x27;s handling of that transaction is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. If you subscribe, you can cancel at any time in the Google Play subscription settings.</p>
-  <h2>Permissions</h2>
-  <p>The app requests three permissions.</p>
+  <p>What leaves your device is the identifier of the place you opened, the article&#x27;s title and your selected language. As with visiting any website, Wikimedia&#x27;s servers also see technical request data such as your IP address. Their handling of it is described in the <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Foundation Privacy Policy</a>. The result is cached on your device, so opening the same place again usually needs no request at all.</p>
+  <p><strong>2. When an article is not available in your language.</strong> If Wikipedia has the article only in another language, Terrella asks our server for a machine translation. The app sends the identifier of the place, the article&#x27;s title, the language it is in, the language you want and a checksum of the text — not the text itself. The server fetches the same public article from Wikipedia, has it translated by <strong>Microsoft Azure Translator</strong>, and keeps the result so the next reader of that article gets it without a second translation. What reaches Microsoft is the text of a public Wikipedia article and nothing about you; its handling is covered by the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>. You can switch translation off with &quot;Translate articles&quot; in the menu; the article is then shown in the language Wikipedia has it in.</p>
+  <p><strong>3. Live Earth and the home-screen widget.</strong> The Live Earth view shows current weather, wildfires, earthquakes, volcanoes, storms and other events. Our server collects this data from public scientific sources (NOAA, NASA, USGS and others) and the app downloads it from our server while the view is open. If you place the widget on your home screen, it downloads a short summary from the same server, about every 30 minutes as Android schedules it. The app sends nothing in these requests except which file it wants; your device never contacts the scientific sources itself.</p>
+  <p><strong>4. When you make a purchase.</strong> Purchases and subscriptions are processed entirely by <strong>Google Play Billing</strong>. We never see or receive your name, payment card or billing address — the app only learns from Google whether an active purchase exists. Google&#x27;s handling of that transaction is covered by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. If you subscribe, you can cancel at any time in the Google Play subscription settings.</p>
+  <h2>Our server</h2>
+  <p>Our server is located in the United States. Like any web server, it receives your IP address with each request — it cannot answer a request otherwise. It does not write that address down:</p>
   <ul>
-    <li><strong>Internet access</strong> (<code>INTERNET</code>), used only for the two cases above.</li>
+    <li>its access log keeps only the time, the file requested, the response code and size, and which part of the app asked (for example <code>Terrella/widget</code>) — no IP address, no device details and no identifier of any kind; the log is deleted after 14 days</li>
+    <li>from that log it keeps one line per day of totals — how many requests and for which files — and nothing about any single reader</li>
+    <li>to protect itself from abuse it limits how often one address may make requests; that counter lives only in memory and is never saved.</li>
+  </ul>
+  <p>There are no cookies, no accounts and no way to link one request to another.</p>
+  <h2>Permissions</h2>
+  <p>The app requests four permissions.</p>
+  <ul>
+    <li><strong>Internet access</strong> (<code>INTERNET</code>), used only for the cases above.</li>
+    <li><strong>Network state</strong> (<code>ACCESS_NETWORK_STATE</code>), used only by the home-screen widget, so that Android refreshes it when a connection is available instead of trying while you are offline.</li>
     <li><strong>Microphone</strong> (<code>RECORD_AUDIO</code>), used only for voice search: it is requested the first time you tap the microphone in the search field, never at launch, and the app does not open it at any other time. What you say is passed to your device&#x27;s own speech recognition — the same one the keyboard&#x27;s dictation button uses — and comes back as text in the search field. Terrella neither stores the audio nor sends it anywhere itself. Whether that recognition happens on the device or through your speech provider is decided by your device&#x27;s settings, not by us. Voice search is optional; typing does the same thing.</li>
     <li><strong>Approximate location</strong> (<code>ACCESS_COARSE_LOCATION</code>), used only by the &quot;My location&quot; button: it is requested the first time you tap that button, never at launch. The app then asks Android for one approximate position, accurate to roughly a town, to turn the globe towards you or to show the sky above you on the star globe. The position is kept in memory only while the app is open: it is not saved, not added to your journal and not sent anywhere. Precise location is never requested. You can withdraw the permission at any time in your device&#x27;s settings; everything else in the app works without it.</li>
   </ul>
   <h2>Backups</h2>
-  <p>If backups are enabled in your Google account, Android may copy the app&#x27;s local settings (language, filters, purchase status) and your travel journal to your Google Drive in encrypted form. This is a standard Android feature managed by Google, not by Terrella.</p>
+  <p>If backups are enabled in your Google account, Android may copy the app&#x27;s local settings (language, filters, Live Earth settings, purchase status) and your travel journal to your Google Drive in encrypted form. This is a standard Android feature managed by Google, not by Terrella.</p>
   <h2>Children</h2>
-  <p>Terrella is suitable for children, and its Google Play listing declares an audience from the age of 9 upwards. It follows Google Play's Families policy.</p>
-  <p>We collect nothing from anyone, children included: there is no account, no analytics, no advertising, no advertising identifier and no tracking of any kind. Nothing a child does in the app leaves the device, so there is no personal information of a child for us to store, share or delete — and nothing whose collection would require a parent's consent.</p>
-  <p>One thing a parent or a teacher should know: tapping &quot;read the full article&quot; leaves Terrella and opens Wikipedia in the device's own browser. Wikipedia is an encyclopedia written by volunteers, and we neither control nor moderate what it contains. Inside the app itself a child sees only the short summary of the object they tapped.</p>
+  <p>Terrella is suitable for children, and its Google Play listing declares an audience from the age of 9 upwards. It follows Google Play&#x27;s Families policy.</p>
+  <p>We collect nothing from anyone, children included: there is no account, no analytics, no advertising, no advertising identifier and no tracking of any kind. The requests described above carry no identifier and are not recorded against anyone, so there is no personal information of a child for us to store, share or delete — and nothing whose collection would require a parent&#x27;s consent.</p>
+  <p>One thing a parent or a teacher should know: tapping &quot;read the full article&quot; leaves Terrella and opens Wikipedia in the device&#x27;s own browser. Wikipedia is an encyclopedia written by volunteers, and we neither control nor moderate what it contains. Inside the app itself a child sees only the short summary of the object they tapped.</p>
   <h2>Changes to this policy</h2>
   <p>If the policy changes, the updated version will be published at this same URL with a new &quot;Last updated&quot; date. Material changes will accompany an app update.</p>
   <h2>Contact</h2>
@@ -180,11 +196,12 @@
 <!-- ==================== УКРАЇНСЬКОЮ ==================== -->
 <section id="uk" lang="uk">
   <h1>Політика конфіденційності — Terrella</h1>
-  <p class="updated"><strong>Останнє оновлення:</strong> 21 жовтня 2026 року</p>
+  <p class="updated"><strong>Останнє оновлення:</strong> 28 жовтня 2026 року</p>
   <h2>Хто ми</h2>
-  <p>Terrella — мобільний застосунок: інтерактивний глобус і Сонячна система, які працюють без інтернету. Цей документ описує, що застосунок робить з даними і як ми ставимося до вашої приватності.</p>
+  <p>Terrella — мобільний застосунок: інтерактивний глобус і Сонячна система. Сама мапа працює без інтернету; кілька функцій користуються мережею, і кожну з них описано нижче. Цей документ описує, що застосунок робить з даними і як ми ставимося до вашої приватності.</p>
   <h2>Що ми збираємо</h2>
-  <p><strong>Нічого.</strong> У Terrella немає серверів, облікових записів і входу в систему. Ми не збираємо, не зберігаємо і не передаємо жодної інформації про вас — і не маємо жодної можливості вас ідентифікувати.</p>
+  <p><strong>Нічого про вас.</strong> У Terrella немає облікових записів і входу в систему. Ми не збираємо, не зберігаємо і не передаємо жодної інформації про вас — і не маємо жодної можливості вас ідентифікувати.</p>
+  <p>У Terrella є один власний сервер. Він роздає публічні дані — для режиму «Жива Земля», віджета на робочий стіл і перекладу статей — і не зберігає нічого, що ідентифікувало б читача. Що він бачить і що зберігає, описано нижче, у розділі «Наш сервер».</p>
   <p>Застосунок не використовує:</p>
   <ul>
     <li>аналітику чи стеження (Google Analytics, Firebase тощо)</li>
@@ -201,32 +218,47 @@
       <tr><td>Налаштування фільтра підписів</td><td>Щоб ваш вибір підписів на мапі зберігався після перезапуску</td></tr>
       <tr><td>Статус покупки (чи активний Pro і який продукт його відкрив)</td><td>Щоб платні функції працювали без мережі, не питаючи магазин щоразу</td></tr>
       <tr><td>Кеш описів з Wikipedia, які ви відкривали (до 400 записів, зберігаються 90 днів)</td><td>Щоб раз переглянуте місце відкривалося й без інтернету</td></tr>
+      <tr><td>Налаштування «Живої Землі»: які шари показано і в чому показувати температуру, °C чи °F</td><td>Щоб режим відкривався таким, яким ви його залишили</td></tr>
+      <tr><td>Чи перекладати статті («Перекладати статті» в меню)</td><td>Щоб ваш вибір зберігався після перезапуску</td></tr>
+      <tr><td>Якщо ви додали віджет на робочий стіл: останнє отримане ним зведення і мова, якою його показувати</td><td>Щоб віджету було що показати між оновленнями</td></tr>
       <tr><td>Ваш щоденник подорожей: місця, які ви до нього додали, їхні дати й ваші нотатки, а також чи показувати його на глобусі</td><td>Це ваш щоденник. Він залишає пристрій, лише якщо ви самі експортуєте його у файл, у місце, яке оберете</td></tr>
     </tbody>
   </table>
-  <p>Уся мапа — усі режими, підписи, назви та факти — міститься всередині застосунку. Дані про те, куди саме ви дивитесь на глобусі, нікуди не надсилаються, і застосунок повністю працює з вимкненою мережею.</p>
+  <p>Уся мапа — усі режими, крім «Живої Землі», підписи, назви та факти — міститься всередині застосунку. Дані про те, куди саме ви дивитесь на глобусі, нікуди не надсилаються, і мапа повністю працює з вимкненою мережею.</p>
   <h2>Коли застосунок звертається до інтернету</h2>
-  <p>Застосунок виходить у мережу рівно у двох випадках.</p>
-  <p><strong>1. Коли ви торкаєтесь об&#x27;єкта й відкриваєте його опис.</strong> Тоді Terrella запитує відповідну статтю у Wikipedia та Wikidata — обидва сервіси належать Wikimedia Foundation:</p>
+  <p>Застосунок виходить у мережу в чотирьох описаних нижче випадках і більше ні в яких.</p>
+  <p><strong>1. Коли ви торкаєтесь об&#x27;єкта й відкриваєте його опис.</strong> Тоді Terrella запитує відповідну статтю та її фотографії у Wikipedia, Wikidata і Wikimedia Commons — усі ці сервіси належать Wikimedia Foundation:</p>
   <ul>
     <li><code>www.wikidata.org</code> — щоб визначити, яка стаття відповідає обраному об&#x27;єкту вашою мовою</li>
-    <li><code>&lt;мова&gt;.wikipedia.org</code> — щоб отримати короткий опис, який показується.</li>
+    <li><code>&lt;мова&gt;.wikipedia.org</code> — щоб отримати короткий опис, який показується, і перелік фотографій статті</li>
+    <li><code>commons.wikimedia.org</code> і <code>upload.wikimedia.org</code> — для самих фотографій та підписів до них.</li>
   </ul>
-  <p>З пристрою надсилається ідентифікатор відкритого об&#x27;єкта та обрана мова. Як і під час відвідування будь-якого сайту, сервери Wikimedia також бачать технічні дані запиту, зокрема вашу IP-адресу. Як вони з цим поводяться, описано в <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Політиці конфіденційності Wikimedia Foundation</a>. Результат кешується на пристрої, тож повторне відкриття того самого об&#x27;єкта здебільшого взагалі не потребує запиту.</p>
-  <p><strong>2. Коли ви робите покупку.</strong> Покупки та підписки повністю обробляє <strong>Google Play Billing</strong>. Ми не бачимо й не отримуємо ваше ім&#x27;я, платіжну картку чи адресу — застосунок дізнається від Google лише те, чи існує активна покупка. Обробка транзакції описана в <a href="https://policies.google.com/privacy">Політиці конфіденційності Google</a>. Підписку можна скасувати будь-коли в налаштуваннях підписок Google Play.</p>
-  <h2>Дозволи</h2>
-  <p>Застосунок запитує три дозволи.</p>
+  <p>З пристрою надсилається ідентифікатор відкритого об&#x27;єкта, назва статті та обрана мова. Як і під час відвідування будь-якого сайту, сервери Wikimedia також бачать технічні дані запиту, зокрема вашу IP-адресу. Як вони з цим поводяться, описано в <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Політиці конфіденційності Wikimedia Foundation</a>. Результат кешується на пристрої, тож повторне відкриття того самого об&#x27;єкта здебільшого взагалі не потребує запиту.</p>
+  <p><strong>2. Коли статті немає вашою мовою.</strong> Якщо у Wikipedia стаття є лише іншою мовою, Terrella просить у нашого сервера машинний переклад. Застосунок надсилає ідентифікатор об&#x27;єкта, назву статті, її мову, потрібну вам мову та контрольну суму тексту — але не сам текст. Сервер отримує ту саму публічну статтю з Wikipedia, перекладає її через <strong>Microsoft Azure Translator</strong> і зберігає результат, щоб наступний читач цієї статті отримав його без повторного перекладу. До Microsoft потрапляє текст публічної статті Wikipedia і нічого про вас; як Microsoft із ним поводиться, описано в <a href="https://privacy.microsoft.com/privacystatement">Заяві про конфіденційність Microsoft</a>. Переклад можна вимкнути пунктом «Перекладати статті» в меню — тоді стаття показується тією мовою, якою вона є у Wikipedia.</p>
+  <p><strong>3. «Жива Земля» і віджет на робочий стіл.</strong> Режим «Жива Земля» показує поточну погоду, лісові пожежі, землетруси, вулкани, шторми та інші події. Наш сервер збирає ці дані з публічних наукових джерел (NOAA, NASA, USGS та інших), а застосунок завантажує їх з нашого сервера, поки режим відкритий. Якщо ви додали віджет на робочий стіл, він завантажує коротке зведення з того самого сервера — приблизно раз на 30 хвилин, як це планує Android. У цих запитах застосунок не надсилає нічого, крім назви потрібного файлу; до наукових джерел ваш пристрій сам не звертається.</p>
+  <p><strong>4. Коли ви робите покупку.</strong> Покупки та підписки повністю обробляє <strong>Google Play Billing</strong>. Ми не бачимо й не отримуємо ваше ім&#x27;я, платіжну картку чи адресу — застосунок дізнається від Google лише те, чи існує активна покупка. Обробка транзакції описана в <a href="https://policies.google.com/privacy">Політиці конфіденційності Google</a>. Підписку можна скасувати будь-коли в налаштуваннях підписок Google Play.</p>
+  <h2>Наш сервер</h2>
+  <p>Наш сервер розташований у США. Як і будь-який вебсервер, він отримує вашу IP-адресу з кожним запитом — інакше він не зміг би відповісти. Але він її не записує:</p>
   <ul>
-    <li><strong>Доступ до інтернету</strong> (<code>INTERNET</code>) — лише для двох описаних вище випадків.</li>
+    <li>його журнал запитів зберігає лише час, запитаний файл, код і розмір відповіді та те, яка частина застосунку зробила запит (наприклад, <code>Terrella/widget</code>) — без IP-адреси, без даних про пристрій і без будь-якого ідентифікатора; журнал видаляється через 14 днів</li>
+    <li>з цього журналу зберігається один рядок підсумків на день — скільки було запитів і до яких файлів — і нічого про окремого читача</li>
+    <li>щоб захиститися від зловживань, сервер обмежує, як часто можна робити запити з однієї адреси; цей лічильник існує лише в пам&#x27;яті й ніколи не записується.</li>
+  </ul>
+  <p>Немає cookie, облікових записів і жодного способу пов&#x27;язати один запит з іншим.</p>
+  <h2>Дозволи</h2>
+  <p>Застосунок запитує чотири дозволи.</p>
+  <ul>
+    <li><strong>Доступ до інтернету</strong> (<code>INTERNET</code>) — лише для описаних вище випадків.</li>
+    <li><strong>Стан мережі</strong> (<code>ACCESS_NETWORK_STATE</code>) — лише для віджета на робочий стіл: щоб Android оновлював його, коли з&#x27;явиться з&#x27;єднання, а не намагався зробити це без мережі.</li>
     <li><strong>Мікрофон</strong> (<code>RECORD_AUDIO</code>) — лише для голосового пошуку. Його запитують під час першого натискання на мікрофон у полі пошуку, а не під час запуску, і в інший час застосунок мікрофон не відкриває. Сказане передається системі розпізнавання мовлення вашого пристрою — тій самій, якою користується кнопка диктування на клавіатурі, — і повертається текстом у поле пошуку. Terrella не зберігає запис і сама нікуди його не надсилає. Чи відбувається розпізнавання на пристрої, чи через вашого постачальника мовленнєвих послуг, вирішують налаштування пристрою, а не ми. Голосовий пошук необовʼязковий: набір з клавіатури робить те саме.</li>
     <li><strong>Приблизне місцезнаходження</strong> (<code>ACCESS_COARSE_LOCATION</code>) — лише для кнопки «Моє місцезнаходження». Його запитують під час першого натискання на цю кнопку, а не під час запуску. Тоді застосунок просить в Android одне приблизне місцезнаходження, з точністю приблизно до міста, щоб повернути глобус до вас або показати небо над вами на зоряному глобусі. Місцезнаходження зберігається в пам&#x27;яті лише доки застосунок відкритий: його не записують, не додають до щоденника і нікуди не надсилають. Точне місцезнаходження застосунок не запитує ніколи. Дозвіл можна будь-коли відкликати в налаштуваннях пристрою; решта застосунку працює і без нього.</li>
   </ul>
   <h2>Резервні копії</h2>
-  <p>Якщо у вашому обліковому записі Google увімкнено резервне копіювання, Android може копіювати локальні налаштування застосунку (мова, фільтри, статус покупки) і ваш щоденник подорожей на ваш Google Диск у зашифрованому вигляді. Це стандартна функція Android, якою керує Google, а не Terrella.</p>
+  <p>Якщо у вашому обліковому записі Google увімкнено резервне копіювання, Android може копіювати локальні налаштування застосунку (мова, фільтри, налаштування «Живої Землі», статус покупки) і ваш щоденник подорожей на ваш Google Диск у зашифрованому вигляді. Це стандартна функція Android, якою керує Google, а не Terrella.</p>
   <h2>Діти</h2>
   <p>Застосунок підходить дітям, і в його картці в Google Play заявлено аудиторію починаючи з 9 років. Він дотримується правил програми Google Play «Застосунки для всієї родини».</p>
-  <p>Ми не збираємо дані ні в кого, зокрема в дітей: немає облікових записів, аналітики, реклами, рекламного ідентифікатора й жодного стеження. Ніщо з того, що дитина робить у застосунку, не залишає пристрій — отже, у нас немає персональних даних дитини, які можна було б зберігати, передати чи видалити, і немає збору, для якого потрібна була б згода батьків.</p>
-  <p>Про що варто знати батькам і вчителям: натискання «читати статтю» виводить із Терелли й відкриває Вікіпедію у браузері пристрою. Вікіпедія — енциклопедія, яку пишуть добровольці, і ми не керуємо її вмістом і не модеруємо його. Усередині самого застосунку дитина бачить лише коротку довідку про той об'єкт, який натиснула.</p>
+  <p>Ми не збираємо дані ні в кого, зокрема в дітей: немає облікових записів, аналітики, реклами, рекламного ідентифікатора й жодного стеження. Описані вище запити не несуть жодного ідентифікатора і ні за ким не записуються — отже, у нас немає персональних даних дитини, які можна було б зберігати, передати чи видалити, і немає збору, для якого потрібна була б згода батьків.</p>
+  <p>Про що варто знати батькам і вчителям: натискання «читати статтю» виводить із Терелли й відкриває Вікіпедію у браузері пристрою. Вікіпедія — енциклопедія, яку пишуть добровольці, і ми не керуємо її вмістом і не модеруємо його. Усередині самого застосунку дитина бачить лише коротку довідку про той об&#x27;єкт, який натиснула.</p>
   <h2>Зміни до цієї політики</h2>
   <p>Якщо політика зміниться, оновлена версія буде опублікована за цією ж адресою з новою датою оновлення. Про суттєві зміни буде повідомлено разом з оновленням застосунку.</p>
   <h2>Контакти</h2>
@@ -236,11 +268,12 @@
 <!-- ==================== РУССКИЙ ==================== -->
 <section id="ru" lang="ru">
   <h1>Политика конфиденциальности — Terrella</h1>
-  <p class="updated"><strong>Последнее обновление:</strong> 21 октября 2026 года</p>
+  <p class="updated"><strong>Последнее обновление:</strong> 28 октября 2026 года</p>
   <h2>Кто мы</h2>
-  <p>Terrella — мобильное приложение: интерактивный глобус и Солнечная система, работающие без интернета. Этот документ описывает, что приложение делает с данными и как мы относимся к вашей приватности.</p>
+  <p>Terrella — мобильное приложение: интерактивный глобус и Солнечная система. Сама карта работает без интернета; несколько функций пользуются сетью, и каждая из них описана ниже. Этот документ описывает, что приложение делает с данными и как мы относимся к вашей приватности.</p>
   <h2>Что мы собираем</h2>
-  <p><strong>Ничего.</strong> У Terrella нет серверов, учётных записей и входа в систему. Мы не собираем, не храним и не передаём никакой информации о вас — и не имеем никакой возможности вас идентифицировать.</p>
+  <p><strong>Ничего о вас.</strong> У Terrella нет учётных записей и входа в систему. Мы не собираем, не храним и не передаём никакой информации о вас — и не имеем никакой возможности вас идентифицировать.</p>
+  <p>У Terrella есть один собственный сервер. Он раздаёт публичные данные — для режима «Живая Земля», виджета на рабочий стол и перевода статей — и не хранит ничего, что идентифицировало бы читателя. Что он видит и что хранит, описано ниже, в разделе «Наш сервер».</p>
   <p>Приложение не использует:</p>
   <ul>
     <li>аналитику и трекинг (Google Analytics, Firebase и подобные)</li>
@@ -257,31 +290,46 @@
       <tr><td>Настройки фильтра подписей</td><td>Чтобы ваш выбор подписей на карте сохранялся после перезапуска</td></tr>
       <tr><td>Статус покупки (активен ли Pro и каким продуктом он открыт)</td><td>Чтобы платные функции работали без сети, не спрашивая магазин каждый раз</td></tr>
       <tr><td>Кэш описаний из Wikipedia, которые вы открывали (до 400 записей, хранятся 90 дней)</td><td>Чтобы однажды просмотренное место открывалось и без интернета</td></tr>
+      <tr><td>Настройки «Живой Земли»: какие слои показаны и в чём показывать температуру, °C или °F</td><td>Чтобы режим открывался таким, каким вы его оставили</td></tr>
+      <tr><td>Переводить ли статьи («Переводить статьи» в меню)</td><td>Чтобы ваш выбор сохранялся после перезапуска</td></tr>
+      <tr><td>Если вы добавили виджет на рабочий стол: последняя полученная им сводка и язык, на котором её показывать</td><td>Чтобы виджету было что показать между обновлениями</td></tr>
       <tr><td>Ваш дневник путешествий: места, которые вы в него добавили, их даты и ваши заметки, а также показывать ли его на глобусе</td><td>Это ваш дневник. Он покидает устройство, только если вы сами экспортируете его в файл, в выбранное вами место</td></tr>
     </tbody>
   </table>
-  <p>Вся карта — все режимы, подписи, названия и факты — находится внутри приложения. Данные о том, куда именно вы смотрите на глобусе, никуда не отправляются, и приложение полностью работает с выключенной сетью.</p>
+  <p>Вся карта — все режимы, кроме «Живой Земли», подписи, названия и факты — находится внутри приложения. Данные о том, куда именно вы смотрите на глобусе, никуда не отправляются, и карта полностью работает с выключенной сетью.</p>
   <h2>Когда приложение обращается к интернету</h2>
-  <p>Приложение выходит в сеть ровно в двух случаях.</p>
-  <p><strong>1. Когда вы нажимаете на объект и открываете его описание.</strong> Тогда Terrella запрашивает соответствующую статью у Wikipedia и Wikidata — оба сервиса принадлежат Wikimedia Foundation:</p>
+  <p>Приложение выходит в сеть в четырёх описанных ниже случаях и больше ни в каких.</p>
+  <p><strong>1. Когда вы нажимаете на объект и открываете его описание.</strong> Тогда Terrella запрашивает соответствующую статью и её фотографии у Wikipedia, Wikidata и Wikimedia Commons — все эти сервисы принадлежат Wikimedia Foundation:</p>
   <ul>
     <li><code>www.wikidata.org</code> — чтобы определить, какая статья соответствует выбранному объекту на вашем языке</li>
-    <li><code>&lt;язык&gt;.wikipedia.org</code> — чтобы получить краткое описание, которое показывается.</li>
+    <li><code>&lt;язык&gt;.wikipedia.org</code> — чтобы получить краткое описание, которое показывается, и список фотографий статьи</li>
+    <li><code>commons.wikimedia.org</code> и <code>upload.wikimedia.org</code> — для самих фотографий и подписей к ним.</li>
   </ul>
-  <p>С устройства уходит идентификатор открытого объекта и выбранный язык. Как и при посещении любого сайта, серверы Wikimedia также видят технические данные запроса, включая ваш IP-адрес. Как они с этим обращаются, описано в <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Политике конфиденциальности Wikimedia Foundation</a>. Результат кэшируется на устройстве, поэтому повторное открытие того же объекта обычно не требует запроса вовсе.</p>
-  <p><strong>2. Когда вы совершаете покупку.</strong> Покупки и подписки полностью обрабатывает <strong>Google Play Billing</strong>. Мы не видим и не получаем ваше имя, платёжную карту или адрес — приложение узнаёт от Google лишь то, существует ли активная покупка. Обработка транзакции описана в <a href="https://policies.google.com/privacy">Политике конфиденциальности Google</a>. Подписку можно отменить в любой момент в настройках подписок Google Play.</p>
-  <h2>Разрешения</h2>
-  <p>Приложение запрашивает три разрешения.</p>
+  <p>С устройства уходит идентификатор открытого объекта, название статьи и выбранный язык. Как и при посещении любого сайта, серверы Wikimedia также видят технические данные запроса, включая ваш IP-адрес. Как они с этим обращаются, описано в <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Политике конфиденциальности Wikimedia Foundation</a>. Результат кэшируется на устройстве, поэтому повторное открытие того же объекта обычно не требует запроса вовсе.</p>
+  <p><strong>2. Когда статьи нет на вашем языке.</strong> Если в Wikipedia статья есть только на другом языке, Terrella просит у нашего сервера машинный перевод. Приложение отправляет идентификатор объекта, название статьи, её язык, нужный вам язык и контрольную сумму текста — но не сам текст. Сервер получает ту же публичную статью из Wikipedia, переводит её через <strong>Microsoft Azure Translator</strong> и хранит результат, чтобы следующий читатель этой статьи получил его без повторного перевода. В Microsoft попадает текст публичной статьи Wikipedia и ничего о вас; как Microsoft с ним обращается, описано в <a href="https://privacy.microsoft.com/privacystatement">Заявлении о конфиденциальности Microsoft</a>. Перевод можно выключить пунктом «Переводить статьи» в меню — тогда статья показывается на том языке, на котором она есть в Wikipedia.</p>
+  <p><strong>3. «Живая Земля» и виджет на рабочий стол.</strong> Режим «Живая Земля» показывает текущую погоду, лесные пожары, землетрясения, вулканы, штормы и другие события. Наш сервер собирает эти данные из публичных научных источников (NOAA, NASA, USGS и других), а приложение загружает их с нашего сервера, пока режим открыт. Если вы добавили виджет на рабочий стол, он загружает короткую сводку с того же сервера — примерно раз в 30 минут, как это планирует Android. В этих запросах приложение не отправляет ничего, кроме имени нужного файла; к научным источникам ваше устройство само не обращается.</p>
+  <p><strong>4. Когда вы совершаете покупку.</strong> Покупки и подписки полностью обрабатывает <strong>Google Play Billing</strong>. Мы не видим и не получаем ваше имя, платёжную карту или адрес — приложение узнаёт от Google лишь то, существует ли активная покупка. Обработка транзакции описана в <a href="https://policies.google.com/privacy">Политике конфиденциальности Google</a>. Подписку можно отменить в любой момент в настройках подписок Google Play.</p>
+  <h2>Наш сервер</h2>
+  <p>Наш сервер расположен в США. Как и любой веб-сервер, он получает ваш IP-адрес с каждым запросом — иначе он не смог бы ответить. Но он его не записывает:</p>
   <ul>
-    <li><strong>Доступ в интернет</strong> (<code>INTERNET</code>) — только для двух описанных выше случаев.</li>
+    <li>его журнал запросов хранит только время, запрошенный файл, код и размер ответа и то, какая часть приложения сделала запрос (например, <code>Terrella/widget</code>) — без IP-адреса, без данных об устройстве и без какого-либо идентификатора; журнал удаляется через 14 дней</li>
+    <li>из этого журнала хранится одна строка итогов в день — сколько было запросов и к каким файлам — и ничего об отдельном читателе</li>
+    <li>чтобы защититься от злоупотреблений, сервер ограничивает, как часто можно делать запросы с одного адреса; этот счётчик существует только в памяти и никогда не записывается.</li>
+  </ul>
+  <p>Нет cookie, учётных записей и никакого способа связать один запрос с другим.</p>
+  <h2>Разрешения</h2>
+  <p>Приложение запрашивает четыре разрешения.</p>
+  <ul>
+    <li><strong>Доступ в интернет</strong> (<code>INTERNET</code>) — только для описанных выше случаев.</li>
+    <li><strong>Состояние сети</strong> (<code>ACCESS_NETWORK_STATE</code>) — только для виджета на рабочий стол: чтобы Android обновлял его, когда появится соединение, а не пытался сделать это без сети.</li>
     <li><strong>Микрофон</strong> (<code>RECORD_AUDIO</code>) — только для голосового поиска. Он запрашивается при первом нажатии на микрофон в поле поиска, не при запуске, и в остальное время приложение микрофон не открывает. Сказанное передаётся системе распознавания речи вашего устройства — той же, которой пользуется кнопка диктовки на клавиатуре, — и возвращается текстом в поле поиска. Терелла не хранит запись и никуда её сама не отправляет. Происходит ли распознавание на устройстве или через вашего поставщика речевых услуг, решают настройки устройства, а не мы. Голосовой поиск необязателен: набор с клавиатуры делает то же самое.</li>
     <li><strong>Примерное местоположение</strong> (<code>ACCESS_COARSE_LOCATION</code>) — только для кнопки «Моё местоположение». Оно запрашивается при первом нажатии на эту кнопку, не при запуске. Тогда приложение просит у Android одно примерное местоположение, с точностью примерно до города, чтобы повернуть глобус к вам или показать небо над вами на звёздном глобусе. Местоположение хранится в памяти, только пока приложение открыто: его не записывают, не добавляют в дневник и никуда не отправляют. Точное местоположение приложение не запрашивает никогда. Разрешение можно в любой момент отозвать в настройках устройства; остальное приложение работает и без него.</li>
   </ul>
   <h2>Резервные копии</h2>
-  <p>Если в вашей учётной записи Google включено резервное копирование, Android может копировать локальные настройки приложения (язык, фильтры, статус покупки) и ваш дневник путешествий на ваш Google Диск в зашифрованном виде. Это стандартная функция Android, которой управляет Google, а не Terrella.</p>
+  <p>Если в вашей учётной записи Google включено резервное копирование, Android может копировать локальные настройки приложения (язык, фильтры, настройки «Живой Земли», статус покупки) и ваш дневник путешествий на ваш Google Диск в зашифрованном виде. Это стандартная функция Android, которой управляет Google, а не Terrella.</p>
   <h2>Дети</h2>
   <p>Приложение подходит детям, и в его карточке в Google Play заявлена аудитория начиная с 9 лет. Оно соблюдает правила программы Google Play «Приложения для всей семьи».</p>
-  <p>Мы не собираем данные ни у кого, включая детей: нет аккаунтов, аналитики, рекламы, рекламного идентификатора и какого-либо отслеживания. Ничто из того, что ребёнок делает в приложении, не покидает устройство — значит, у нас нет персональных данных ребёнка, которые можно было бы хранить, передать или удалить, и нет сбора, для которого требовалось бы согласие родителя.</p>
+  <p>Мы не собираем данные ни у кого, включая детей: нет аккаунтов, аналитики, рекламы, рекламного идентификатора и какого-либо отслеживания. Описанные выше запросы не несут никакого идентификатора и ни за кем не записываются — значит, у нас нет персональных данных ребёнка, которые можно было бы хранить, передать или удалить, и нет сбора, для которого требовалось бы согласие родителя.</p>
   <p>О чём стоит знать родителю и учителю: нажатие «читать статью» выводит из Терреллы и открывает Википедию в браузере устройства. Википедия — энциклопедия, которую пишут добровольцы, и мы не управляем её содержимым и не модерируем его. Внутри самого приложения ребёнок видит только краткую справку о том объекте, который нажал.</p>
   <h2>Изменения этой политики</h2>
   <p>Если политика изменится, обновлённая версия будет опубликована по этому же адресу с новой датой обновления. О существенных изменениях будет сообщено вместе с обновлением приложения.</p>
